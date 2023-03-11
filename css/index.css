@@ -1,14 +1,16 @@
-@font-face {
-    font-family: "Raleway";
-    src: url('Raleway-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
 }
+
 
 body {
     max-width: 1400px;
     margin: auto;
-    font-family: "Raleway", sans-serif;
+    padding: 0 15px;
 }
 
 header {
@@ -19,7 +21,12 @@ header {
 .logo {
     height: 19px;
     width: 61px;
-    padding: 30px 0 0 0;
+    padding: 40px 0 0 0;
+    box-sizing: content-box;
+}
+
+.menu {
+    height: 80px;
 }
 
 ul {
@@ -41,6 +48,7 @@ a {
 
 .linksHeaderGroup {
     text-align: center;
+    margin-top: 0;
 }
 
 a:hover {
@@ -48,7 +56,7 @@ a:hover {
 }
 
 .linksHeader {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 30px;
     padding-right: 30px;
     text-align: center;
@@ -102,14 +110,13 @@ p {
 }
 
 .lieu2 {
-    width: 159px;
-    height: 49px;
+    width: 230px;
+    height: 51px;
     border: 1px solid #D9D9D9;
     font-size: 16px;
     font-weight: bold;
     padding: 0 5px 0 5px;
     position: relative;
-    left: -5px;
 }
 
 input.lieu2:focus {
@@ -373,6 +380,7 @@ footer {
     padding-left: 5%;
     padding-top: 30px;
     padding-bottom: 25px;
+    margin-right: 6%;
 }
 
 .titleFooter {
@@ -391,13 +399,27 @@ footer {
 
 @media screen and (max-width: 991.5px) {
 
+    body {
+        padding: 0 15px;
+    }
+
     main {
         margin: auto;
-        font-family: src="assets/Raleway", sans-serif;
+    }
+
+    .filtreTag {
+        justify-content: space-evenly;
+        padding-left: 0;
+    }
+
+    .filtreTag li {
+        margin-left: 10px;
     }
 
     .filtreBouton {
         overflow: hidden;
+        font-size: 85%;
+        margin-left: 10px;
     }
 
     .hebergement {
@@ -487,7 +509,6 @@ footer {
     }
 }
 
-
 /* Format mobile*/
 
 @media screen and (max-width: 767.5px) {
@@ -538,13 +559,17 @@ footer {
     .lieu4 {
         visibility: visible;
         position: relative;
-        left: -5px;
     }
 
     .filtres {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
+    }
+
+    .filtres h3 {
+        display: flex;
+        align-self: flex-start;
     }
 
     .filtres h2 {
@@ -557,19 +582,24 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         padding-left: 0;
+    }
+
+    .filtreTag li {
+        width: 48%;
+        margin-left: 0;
     }
 
     .filtreBouton {
         font-size: 11px;
         font-weight: 700;
-        width: 160px;
+        width: 100%;
         text-align: left;
-        padding-left: 10px;
+        padding-left: 5px;
         align-items: center;
         display: inline-flex;
-        margin-left: 5px;
+        margin-bottom: 10px;
     }
 
     .filtreBouton i {
